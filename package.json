@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "@babel/plugin-proposal-decorators": "^7.17.2",
+    "mobx": "^6.3.13",
+    "mobx-react": "^7.2.1",
+    "mobx-react-form": "^3.2.0"
+  }
+}
