@@ -4,7 +4,7 @@ import MobxReactForm from 'mobx-react-form';
 import { FormEvent } from 'react';
 import { reaction } from 'mobx';
 
-function getFormValidation(fields, successHandler = (form?: FormEvent) => null, errorHandler = () => null) {
+function getReactFormValidation(fields, successHandler = (form?: FormEvent) => null, errorHandler = () => null) {
   const hooks: any = {};
 
   const plugins: any = {
@@ -12,7 +12,7 @@ function getFormValidation(fields, successHandler = (form?: FormEvent) => null, 
       package: validatorjs,
       extend: ({ validator }) => {
         const messages = validator.getMessages('en');
-        messages.between = 'The :attribute length must be between :min and :max characters.';
+        messages.between = 'This :attribute length must be between :min and :max characters.';
         validator.setMessages('en', messages);
       },
     }),
@@ -41,5 +41,5 @@ function getFormValidation(fields, successHandler = (form?: FormEvent) => null, 
 }
 
 export {
-  getFormValidation,
+  getReactFormValidation,
 };
