@@ -28,7 +28,7 @@ class App extends Component {
     this.form.submit({
       onSuccess: () => {
         alert("successfull");
-       },
+      },
       onError: error => console.log(error),
     });
   };
@@ -40,12 +40,12 @@ class App extends Component {
           {this.form.$('email').label}
         </label>
         <input {...this.form.$('email').bind()} />
-        <p style={{color:'red'}}>{this.form.$('email').error}</p>
+        <p style={{ color: 'red' }}>{this.form.$('email').error}</p>
         <label>
           {this.form.$('password').label}
         </label>
         <input {...this.form.$('password').bind()} />
-        <p style={{color:'red'}}>{this.form.$('password').error}</p>
+        <p style={{ color: 'red' }}>{this.form.$('password').error}</p>
         <button type="submit" onClick={(e) => this.onSubmit(e)}>Submit</button>
         <p>{this.form.error}</p>
       </form>
